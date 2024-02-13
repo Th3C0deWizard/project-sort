@@ -1,9 +1,10 @@
 #include "algorithms/heapSort.hpp"
 #include "algorithms/quickSort.hpp"
 #include <algorithm>
-#include <chrono>
 #include <iostream>
+#include <stdio.h>
 #include <string>
+#include <time.h>
 
 using namespace std::chrono;
 
@@ -62,12 +63,12 @@ int main(int argc, char *argv[]) {
   for (int i = 0; i < 10; i++) {
     int *numbersCopy{new int[N]};
     std::copy_n(numbers, N, numbersCopy);
-    auto start = high_resolution_clock::now();
-    long counter = 0;
+    clock_t t;
+    t = clock();
     (*sort_fun)(numbersCopy, N);
-    auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<microseconds>(stop - start);
-    results += to_string(duration.count()) + "\n";
+    t = clock() - t;
+    double duration = ((double)t) / CLOCKS_PER_SEC;
+    results += to_string(duration) + "\n";
     delete[] numbersCopy;
   }
 

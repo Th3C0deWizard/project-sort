@@ -35,6 +35,7 @@ inline void heapify(int arr[], int N, int i) {
 
 inline void heapSort(int arr[], int N) {
 
+  cout << "heap" << endl;
   // Build heap (rearrange array)
   for (int i = N / 2 - 1; i >= 0; i--)
     heapify(arr, N, i);
@@ -88,6 +89,7 @@ inline void heapify(int arr[], int N, int i, long &counter) {
 
 // HeapSort with instruction counter.
 inline void heapSort(int arr[], int N, long &counter) {
+  cout << "heap" << endl;
 
   // Build heap (rearrange array)
   for (int i = N / 2 - 1; i >= 0; i--)

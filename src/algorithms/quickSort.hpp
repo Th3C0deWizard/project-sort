@@ -40,6 +40,7 @@ inline int partition(int arr[], int start, int end) {
 
 inline void quickSort(int arr[], int start, int end) {
 
+  cout << "quick" << endl;
   // base case
   if (start >= end)
     return;
@@ -98,6 +99,7 @@ inline int partition(int arr[], int start, int end, long &counter) {
 
 inline void quickSort(int arr[], int start, int end, long &counter) {
 
+  cout << "quick" << endl;
   counter++;
   // base case
   if (start >= end)
