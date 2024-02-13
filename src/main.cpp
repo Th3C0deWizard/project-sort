@@ -2,7 +2,6 @@
 #include "algorithms/quickSort.hpp"
 #include <algorithm>
 #include <iostream>
-#include <stdio.h>
 #include <string>
 #include <time.h>
 
